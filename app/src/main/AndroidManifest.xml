@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MaterialAppTheme">
+        <activity android:name=".md2.nestedscrollview.NestedScrollViewActivity"/>
+        <activity android:name=".md2.nestedscrolling.NestedScrolling1Activity"/>
+        <activity android:name=".md2.tradition.NestedTraditionActivity"/>
         <activity android:name=".materialtext.TextInputActivity"
             android:theme="@style/MaterialAppTheme"/>
         <activity android:name=".materialbutton.MaterialButtonActivity" />
