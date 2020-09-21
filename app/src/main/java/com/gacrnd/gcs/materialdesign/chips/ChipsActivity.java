@@ -28,11 +28,11 @@ public class ChipsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ChipDrawable chipDrawable = ChipDrawable.createFromResource(ChipsActivity.this, R.xml.chip_test);
-                chipDrawable.setBounds(0,0,chipDrawable.getIntrinsicWidth(),chipDrawable.getIntrinsicHeight());
+                chipDrawable.setBounds(0, 0, chipDrawable.getIntrinsicWidth(), chipDrawable.getIntrinsicHeight());
                 ImageSpan span = new ImageSpan(chipDrawable);
                 Editable text = binding.etTest.getText();
                 chipDrawable.setText(text.toString());
-                text.setSpan(span,0,text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                text.setSpan(span, 0, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             }
         });
 
@@ -40,10 +40,10 @@ public class ChipsActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 int max = seekBar.getMax();
-                double scale = (double)progress/(double)max;
+                double scale = (double) progress / (double) max;
                 ClipDrawable drawable = (ClipDrawable) binding.ivShow.getBackground();
-                drawable.setLevel((int) (10000*scale));
-                binding.tvInfo.setText(progress+"");
+                drawable.setLevel((int) (10000 * scale));
+                binding.tvInfo.setText(progress + "");
             }
 
             @Override
@@ -60,14 +60,13 @@ public class ChipsActivity extends AppCompatActivity {
         binding.materialbtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(binding.materialbtn.isEnabled()){
+                if (binding.materialbtn.isEnabled()) {
                     binding.materialbtn.setEnabled(false);
-                }else{
+                } else {
                     binding.materialbtn.setEnabled(true);
                 }
             }
         });
-
 
 
     }
